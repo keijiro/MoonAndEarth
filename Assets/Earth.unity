@@ -85,6 +85,7 @@ GameObject:
   - 33: {fileID: 225878933}
   - 23: {fileID: 225878932}
   - 114: {fileID: 225878935}
+  - 114: {fileID: 225878936}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -144,6 +145,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angularVelocity: -10
   rotationAxis: {x: 0, y: 1, z: 0}
+--- !u!114 &225878936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 225878931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56bbd11d1db443f6890f1678d2fc9d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 8900000, guid: 112fc3fc5952848c2a3073382748953d, type: 3}
+  - {fileID: 8900000, guid: 3055308ff9bca44278edb532d9778509, type: 3}
+  - {fileID: 8900000, guid: ff5924b25036240f09e8eb7992e044a8, type: 3}
+  - {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
+  bias: -1
 --- !u!1 &317485260
 GameObject:
   m_ObjectHideFlags: 0

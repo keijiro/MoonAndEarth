@@ -60,6 +60,14 @@ Material:
         first:
           name: _RimPower
         second: 5
+      data:
+        first:
+          name: _BumpOcc
+        second: 80
+      data:
+        first:
+          name: _HorizonFade
+        second: 8.3928566
     m_Colors:
       data:
         first:

@@ -4,6 +4,7 @@
     {
         _ColorMap("Color Map", CUBE) = ""{}
         _NormalMap("Normal Map", 2D) = ""{}
+        _HorizonFade("Horizon Fading", Range(0.0, 10.0)) = 5
     }
     SubShader
     {
@@ -15,6 +16,14 @@
 
         samplerCUBE _ColorMap;
         sampler2D _NormalMap;
+        half _HorizonFade;
+
+        half4 LightingMoon(SurfaceOutput s, half3 lightDir, half atten)
+        {
+            half ln = dot(lightDir, s.Normal);
+            half hr = saturate(dot(lightDir, half3(0, 0, 1)) * _HorizonFade + 1);
+            return half4(s.Albedo * _LightColor0.rgb * (max(0, ln) * hr * atten * 2), 1);
+        }
 
         struct Input
         {
@@ -22,17 +31,9 @@
             float3 localNormal;
         };
 
-        half4 LightingMoon(SurfaceOutput s, half3 lightDir, half atten)
+        void vert(inout appdata_tan v, out Input o)
         {
-            half ln = dot(lightDir, s.Normal);
-            half4 c;
-            c.rgb = s.Albedo * _LightColor0.rgb * (max(0, ln) * atten * 2);
-            return c;
-        }
-
-        void vert(inout appdata_full v, out Input o)
-        {
-            UNITY_INITIALIZE_OUTPUT(Input,o);
+            UNITY_INITIALIZE_OUTPUT(Input, o);
             o.localNormal = v.normal * float3(-1, 1, 1);
         }
 

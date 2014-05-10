@@ -50,6 +50,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _NormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: -.199900001, y: .00300000003}
+      data:
+        first:
           name: _CloudMap
         second:
           m_Texture: {fileID: 8900000, guid: ff5924b25036240f09e8eb7992e044a8, type: 3}
@@ -64,13 +71,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _NormalMap
-        second:
-          m_Texture: {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: -.199900001, y: .00300000003}
-      data:
-        first:
           name: _NightMap
         second:
           m_Texture: {fileID: 2800000, guid: 4b77263eac0344006bfa2d3e1eb414d1, type: 3}
@@ -81,6 +81,10 @@ Material:
         first:
           name: _RimPower
         second: 2.5
+      data:
+        first:
+          name: _HorizonFade
+        second: 8.5714283
       data:
         first:
           name: _Gloss
