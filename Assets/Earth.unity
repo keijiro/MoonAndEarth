@@ -83,6 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 225878934}
   - 33: {fileID: 225878933}
+  - 114: {fileID: 225878937}
   - 23: {fileID: 225878932}
   - 114: {fileID: 225878935}
   - 114: {fileID: 225878936}
@@ -162,6 +163,19 @@ MonoBehaviour:
   - {fileID: 8900000, guid: ff5924b25036240f09e8eb7992e044a8, type: 3}
   - {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
   bias: -1
+--- !u!114 &225878937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 225878931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f459f509d8eb4226ad8b66774d6a2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segments: 96
+  rings: 48
 --- !u!1 &317485260
 GameObject:
   m_ObjectHideFlags: 0

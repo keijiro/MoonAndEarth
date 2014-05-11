@@ -209,6 +209,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 536162821}
   - 33: {fileID: 536162820}
+  - 114: {fileID: 536162824}
   - 23: {fileID: 536162819}
   - 114: {fileID: 536162822}
   - 114: {fileID: 536162823}
@@ -286,6 +287,19 @@ MonoBehaviour:
   - {fileID: 8900000, guid: cdf8bf6f3908d4b3c8eadc34aedb43fc, type: 3}
   - {fileID: 2800000, guid: eb8a3c83e5c564196a87beaba71facd2, type: 3}
   bias: -1
+--- !u!114 &536162824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536162818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f459f509d8eb4226ad8b66774d6a2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segments: 96
+  rings: 48
 --- !u!1 &581896292
 GameObject:
   m_ObjectHideFlags: 0
