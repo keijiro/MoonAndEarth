@@ -12,7 +12,7 @@
         _Specular("Specular", float) = 0.8
         _Fresnel("Fresnel", float) = 0.6
 
-        _CloudColor("Cloud Color", Color) = (1, 1, 1, 1)
+        _CloudColor("Cloud Color", Color) = (1, 1, 1, 0.5)
         _NightColor("Night Light", Color) = (0.5, 0.5, 0.3, 0)
 
         _RimColor("Rim Color", Color) = (0.5, 0.5, 0.5, 0.0)
@@ -28,6 +28,7 @@
         
         CGPROGRAM
         #pragma surface surf Moon vertex:vert
+        #pragma target 3.0
 
         samplerCUBE _ColorMap;
         sampler2D _NormalMap;
@@ -39,7 +40,7 @@
         half _Specular;
         half _Fresnel;
 
-        fixed3 _CloudColor;
+        fixed4 _CloudColor;
         fixed3 _NightColor;
 
         fixed3 _RimColor;
@@ -93,7 +94,7 @@
             half3 normal = UnpackNormal(tex2D(_NormalMap, IN.uv_NormalMap));
             half bump = max(0, _Bumpiness - cloud.r * 2);
 
-            o.Albedo = lerp(color.rgb, _CloudColor, cloud.r);
+            o.Albedo = lerp(color.rgb, _CloudColor.rgb, min(1, cloud.r * _CloudColor.a));
             o.Alpha = tex2D(_NightMap, IN.uv_NormalMap).a;
             o.Normal = normalize(lerp(half3(0, 0, 4), normal, bump));
             o.Gloss = texCUBE(_GlossMap, IN.localNormal).a * (1 - cloud.r) * _Gloss;

@@ -113,7 +113,7 @@ Material:
       data:
         first:
           name: _CloudColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 1, b: 1, a: .745098054}
       data:
         first:
           name: _NightColor
