@@ -29,6 +29,20 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ColorMap
+        second:
+          m_Texture: {fileID: 8900000, guid: cdf8bf6f3908d4b3c8eadc34aedb43fc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: eb8a3c83e5c564196a87beaba71facd2, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Cube
         second:
           m_Texture: {fileID: 8900000, guid: cdf8bf6f3908d4b3c8eadc34aedb43fc, type: 3}
@@ -41,20 +55,6 @@ Material:
           m_Texture: {fileID: 2800000, guid: eb8a3c83e5c564196a87beaba71facd2, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: -.200000003, y: .00079999998}
-      data:
-        first:
-          name: _ColorMap
-        second:
-          m_Texture: {fileID: 8900000, guid: cdf8bf6f3908d4b3c8eadc34aedb43fc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _NormalMap
-        second:
-          m_Texture: {fileID: 2800000, guid: eb8a3c83e5c564196a87beaba71facd2, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: -.200399995, y: .00150000001}
     m_Floats:
       data:
         first:
@@ -62,12 +62,12 @@ Material:
         second: 5
       data:
         first:
-          name: _BumpOcc
-        second: 80
-      data:
-        first:
           name: _HorizonFade
         second: 8.3928566
+      data:
+        first:
+          name: _BumpOcc
+        second: 80
     m_Colors:
       data:
         first:

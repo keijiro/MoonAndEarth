@@ -29,6 +29,41 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ColorMap
+        second:
+          m_Texture: {fileID: 8900000, guid: 112fc3fc5952848c2a3073382748953d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _GlossMap
+        second:
+          m_Texture: {fileID: 8900000, guid: 3055308ff9bca44278edb532d9778509, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CloudMap
+        second:
+          m_Texture: {fileID: 8900000, guid: ff5924b25036240f09e8eb7992e044a8, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NightMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 4b77263eac0344006bfa2d3e1eb414d1, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Cube
         second:
           m_Texture: {fileID: 8900000, guid: 112fc3fc5952848c2a3073382748953d, type: 3}
@@ -41,50 +76,7 @@ Material:
           m_Texture: {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: -.201000005, y: .00200000009}
-      data:
-        first:
-          name: _ColorMap
-        second:
-          m_Texture: {fileID: 8900000, guid: 112fc3fc5952848c2a3073382748953d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _NormalMap
-        second:
-          m_Texture: {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: -.199900001, y: .00300000003}
-      data:
-        first:
-          name: _CloudMap
-        second:
-          m_Texture: {fileID: 8900000, guid: ff5924b25036240f09e8eb7992e044a8, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _GlossMap
-        second:
-          m_Texture: {fileID: 8900000, guid: 3055308ff9bca44278edb532d9778509, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _NightMap
-        second:
-          m_Texture: {fileID: 2800000, guid: 4b77263eac0344006bfa2d3e1eb414d1, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
-      data:
-        first:
-          name: _RimPower
-        second: 2.5
-      data:
-        first:
-          name: _HorizonFade
-        second: 8.5714283
       data:
         first:
           name: _Gloss
@@ -97,6 +89,14 @@ Material:
         first:
           name: _Fresnel
         second: .100000001
+      data:
+        first:
+          name: _RimPower
+        second: 2.5
+      data:
+        first:
+          name: _HorizonFade
+        second: 8.5714283
     m_Colors:
       data:
         first:
@@ -108,13 +108,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _RimColor
-        second: {r: .626243472, g: .656402409, b: .727941155, a: 0}
-      data:
-        first:
           name: _CloudColor
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _NightColor
         second: {r: .573529422, g: .567945361, b: .438581318, a: 0}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .626243472, g: .656402409, b: .727941155, a: 0}

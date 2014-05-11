@@ -26,7 +26,7 @@ class SphereBuilder(MonoBehaviour):
             for si in range(segments + 1):
 
                 u = 1.0 * si / segments
-                phi = Mathf.PI * 2 * (u - 0.5)
+                phi = Mathf.PI * 2 * (u - 0.25)
                 x = Mathf.Cos(phi) * l_xz
                 z = Mathf.Sin(phi) * l_xz
 
