@@ -15,7 +15,7 @@ Unity.
 License
 -------
 
-The images of the Moon are made by [John van Vliet1][1]. These images are
+The images of the Moon are made by [John van Vliet][1]. These images are
 provided under the Creative Commons license (cc-by-sa).
 
 The images of the Earth are proveded from [NASA][2], so basically you can use
