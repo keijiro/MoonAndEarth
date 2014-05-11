@@ -18,6 +18,7 @@
         _RimColor("Rim Color", Color) = (0.5, 0.5, 0.5, 0.0)
         _RimPower("Rim Power", float) = 1.0
 
+        _Bumpiness("Bumpiness", Range(0, 1)) = 0.5
         _HorizonFade("Horizon Fading", Range(0.0, 10.0)) = 5
     }
     SubShader
@@ -44,6 +45,7 @@
         fixed3 _RimColor;
         half _RimPower;
 
+        half _Bumpiness;
         half _HorizonFade;
 
         struct Input
@@ -88,9 +90,12 @@
         {
             half4 color = texCUBE(_ColorMap, IN.localNormal);
             half4 cloud = texCUBE(_CloudMap, IN.localNormal);
+            half3 normal = UnpackNormal(tex2D(_NormalMap, IN.uv_NormalMap));
+            half bump = max(0, _Bumpiness - cloud.r * 2);
+
             o.Albedo = lerp(color.rgb, _CloudColor, cloud.r);
             o.Alpha = tex2D(_NightMap, IN.uv_NormalMap).a;
-            o.Normal = UnpackNormal(tex2D(_NormalMap, IN.uv_NormalMap));
+            o.Normal = normalize(lerp(half3(0, 0, 4), normal, bump));
             o.Gloss = texCUBE(_GlossMap, IN.localNormal).a * (1 - cloud.r) * _Gloss;
             o.Specular = _Specular;
         }

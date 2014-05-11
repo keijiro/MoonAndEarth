@@ -97,6 +97,10 @@ Material:
         first:
           name: _HorizonFade
         second: 8.5714283
+      data:
+        first:
+          name: _Bumpiness
+        second: .517857134
     m_Colors:
       data:
         first:
