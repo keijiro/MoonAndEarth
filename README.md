@@ -18,7 +18,7 @@ License
 The images of the Moon are made by [John van Vliet][1]. These images are
 provided under the Creative Commons license (cc-by-sa).
 
-The images of the Earth are proveded from [NASA][2], so basically you can use
+The images of the Earth are provided from [NASA][2], so basically you can use
 these images freely.
 
   [1]: http://www.celestiamotherlode.net/catalog/show_creator_details.php?creator_id=10
