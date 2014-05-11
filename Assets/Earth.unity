@@ -161,7 +161,6 @@ MonoBehaviour:
   - {fileID: 8900000, guid: 112fc3fc5952848c2a3073382748953d, type: 3}
   - {fileID: 8900000, guid: 3055308ff9bca44278edb532d9778509, type: 3}
   - {fileID: 8900000, guid: ff5924b25036240f09e8eb7992e044a8, type: 3}
-  - {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
   bias: -1
 --- !u!114 &225878937
 MonoBehaviour:
