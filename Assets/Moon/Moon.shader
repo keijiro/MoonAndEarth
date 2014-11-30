@@ -12,7 +12,7 @@
         LOD 200
         
         CGPROGRAM
-        #pragma surface surf Moon vertex:vert
+        #pragma surface surf Moon nolightmap vertex:vert
 
         samplerCUBE _ColorMap;
         sampler2D _NormalMap;

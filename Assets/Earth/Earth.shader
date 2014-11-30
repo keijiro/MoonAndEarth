@@ -27,7 +27,7 @@
         LOD 200
         
         CGPROGRAM
-        #pragma surface surf Moon vertex:vert
+        #pragma surface surf Earth nolightmap vertex:vert
         #pragma target 3.0
 
         samplerCUBE _ColorMap;
@@ -55,7 +55,7 @@
             float3 localNormal;
         };
 
-        half4 LightingMoon(SurfaceOutput s, half3 lightDir, half3 viewDir, half atten)
+        half4 LightingEarth(SurfaceOutput s, half3 lightDir, half3 viewDir, half atten)
         {
             half3 h = normalize(lightDir + viewDir);
 
