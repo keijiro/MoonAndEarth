@@ -19,12 +19,10 @@
         _RimPower("Rim Power", float) = 1.0
 
         _Bumpiness("Bumpiness", Range(0, 1)) = 0.5
-        _HorizonFade("Horizon Fading", Range(0.0, 10.0)) = 5
     }
     SubShader
     {
         Tags { "RenderType"="Opaque" }
-        LOD 200
         
         CGPROGRAM
         #pragma surface surf Earth nolightmap vertex:vert
@@ -47,7 +45,6 @@
         half _RimPower;
 
         half _Bumpiness;
-        half _HorizonFade;
 
         struct Input
         {
@@ -64,19 +61,17 @@
             half vh = dot(viewDir, h);
             half vn = dot(viewDir, s.Normal);
 
-            half hr = saturate(dot(lightDir, half3(0, 0, 1)) * _HorizonFade + 1);
-
             float f_e = pow(1 - vh, 5);
             float f = f_e + _Fresnel * (1 - f_e);
 
-            float diff = max(0, ln) * hr;
-            float spec = pow(hn, s.Specular * 128) * f * s.Gloss * hr;
+            float diff = max(0, ln);
+            float spec = pow(hn, s.Specular * 128) * f * s.Gloss;
 
             half3 rim = _RimColor * pow(1 - vn, _RimPower) * diff;
-            half3 night = pow(max(0, -ln), 4) * s.Alpha * _NightColor;
+            half3 night = pow(max(0, -ln), 4.0) * s.Alpha * _NightColor;
 
             fixed4 c;
-            c.rgb = (s.Albedo * _LightColor0.rgb * diff + _LightColor0.rgb * spec + rim) * (atten * 2) + night;
+            c.rgb = (s.Albedo * _LightColor0.rgb * diff + _LightColor0.rgb * spec + rim) * atten + night;
             c.a = s.Alpha;
             return c;
         }
