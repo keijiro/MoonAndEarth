@@ -532,6 +532,9 @@ GameObject:
   - 92: {fileID: 1415335256}
   - 124: {fileID: 1415335255}
   - 81: {fileID: 1415335254}
+  - 114: {fileID: 1415335261}
+  - 114: {fileID: 1415335260}
+  - 114: {fileID: 1415335259}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -606,3 +609,110 @@ Transform:
   m_Children: []
   m_Father: {fileID: 668460263}
   m_RootOrder: 0
+--- !u!114 &1415335259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1415335253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10593b7d510b64560a297a8af1356dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _colorTemp: .319999993
+  _colorTint: -.0500000007
+  _toneMapping: 1
+  _exposure: 1.26999998
+  _saturation: 1
+  _rCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  _gCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  _bCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  _cCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  _ditherMode: 0
+  shader: {fileID: 4800000, guid: dc9775b65c52747e69fc4c854c00d696, type: 3}
+--- !u!114 &1415335260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1415335253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e11ef96a8174459fa3d231009ff28f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lateralShift: .839999974
+  _axialStrength: 0
+  _axialShift: .300000012
+  _axialQuality: 0
+  _shader: {fileID: 4800000, guid: 4e3f6504698a346cb971f9ab5286fca9, type: 3}
+--- !u!114 &1415335261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1415335253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc18a55c333d51489e5ee49b3cbff50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _falloff: .5
+  _shader: {fileID: 4800000, guid: 89a223cbeee1935419811f8736c0a9b3, type: 3}
