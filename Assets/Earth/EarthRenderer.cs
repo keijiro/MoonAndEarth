@@ -33,6 +33,15 @@ public class EarthRenderer : MonoBehaviour
         set { _rimExponent = value; }
     }
 
+    // sea color
+    [SerializeField]
+    Color _seaColor = new Color(0, 0, 1, 0);
+
+    public Color seaColor {
+        get { return _seaColor; }
+        set { _seaColor = value; }
+    }
+
     // base color saturation
     [SerializeField, Range(0, 2)]
     float _colorSaturation = 1;
@@ -247,6 +256,7 @@ public class EarthRenderer : MonoBehaviour
     {
         if (_needsReset) ResetResources();
 
+        _baseMaterial.SetColor("_SeaColor", _seaColor);
         _baseMaterial.SetFloat("_Saturation", _colorSaturation);
         _baseMaterial.SetFloat("_Glossiness", _smoothness);
         _baseMaterial.SetColor("_CloudColor", _cloudColor);

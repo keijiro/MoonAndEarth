@@ -8,6 +8,7 @@ public class EarthRendererEditor : Editor
     SerializedProperty _segments;
     SerializedProperty _rings;
     SerializedProperty _colorSaturation;
+    SerializedProperty _seaColor;
     SerializedProperty _smoothness;
     SerializedProperty _cloudColor;
     SerializedProperty _rimColor;
@@ -26,6 +27,7 @@ public class EarthRendererEditor : Editor
         _rings    = serializedObject.FindProperty("_rings");
 
         _colorSaturation = serializedObject.FindProperty("_colorSaturation");
+        _seaColor        = serializedObject.FindProperty("_seaColor");
         _nightLightColor = serializedObject.FindProperty("_nightLightColor");
 
         _smoothness  = serializedObject.FindProperty("_smoothness");
@@ -61,6 +63,7 @@ public class EarthRendererEditor : Editor
 
         EditorGUILayout.LabelField("Color Options", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(_colorSaturation, _textBaseSaturation);
+        EditorGUILayout.PropertyField(_seaColor);
         EditorGUILayout.PropertyField(_nightLightColor, _textNightSideLight);
 
         EditorGUILayout.Space();

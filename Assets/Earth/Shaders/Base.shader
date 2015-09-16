@@ -3,6 +3,7 @@
     Properties
     {
         _BaseMap ("Base Map", CUBE) = ""{}
+        _SeaColor ("Sea Color", Color) = (0, 0, 1, 0)
         _Saturation ("Saturation", Range(0,2)) = 1
 
         _NormalMap ("Normal Map", 2D) = ""{}
@@ -24,6 +25,7 @@
         #pragma target 3.0
 
         samplerCUBE _BaseMap;
+        half4 _SeaColor;
         half _Saturation;
 
         sampler2D _NormalMap;
@@ -49,15 +51,16 @@
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
-            half4 base = texCUBE(_BaseMap, IN.localNormal);
+            half3 base = texCUBE(_BaseMap, IN.localNormal).rgb;
             half4 normal = tex2D(_NormalMap, IN.uv_NormalMap);
             half gloss = texCUBE(_GlossMap, IN.localNormal).r;
             half cloud = texCUBE(_CloudMap, IN.localNormal).r;
 
-            base = lerp((float4)Luminance(base), base, _Saturation);
+            base = lerp((float3)Luminance(base), base, _Saturation);
+            base = lerp(base, _SeaColor.rgb, gloss * _SeaColor.a);
             cloud = min(1, cloud * _CloudColor.a);
 
-            o.Albedo = lerp(base.rgb, _CloudColor.rgb, cloud);
+            o.Albedo = lerp(base, _CloudColor.rgb, cloud);
             o.Normal = UnpackScaleNormal(normal, _NormalScale);
             o.Smoothness = _Glossiness * gloss * (1 - cloud);
 

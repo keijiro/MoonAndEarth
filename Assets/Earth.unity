@@ -167,13 +167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4dfdb6ab9cb432dadc1db2a9545f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _colorSaturation: .5
-  _smoothness: .400000006
   _cloudColor: {r: 1, g: 1, b: 1, a: 1}
-  _rimColor: {r: .985121131, g: 1.04581368, b: 1.11647058, a: 1}
-  _rimExponent: 3.20000005
-  _normalScale: .100000001
+  _rimColor: {r: .853771627, g: .953416049, b: 1.11647058, a: 1}
+  _rimExponent: 5
+  _seaColor: {r: .0666666701, g: .231372565, b: .34117648, a: .597000003}
+  _colorSaturation: .5
   _nightLightColor: {r: .219999999, g: .200000003, b: .150000006, a: 1}
+  _smoothness: .400000006
+  _normalScale: .100000001
   _castShadows: 1
   _receiveShadows: 1
   _segments: 64
