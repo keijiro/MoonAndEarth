@@ -163,7 +163,7 @@ public class MoonRenderer : MonoBehaviour
         mesh.SetIndices(indices, MeshTopology.Triangles, 0);
         mesh.Optimize();
 
-        mesh.bounds = new Bounds(Vector3.zero, Vector3.one);
+        mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 0.5f);
 
         return mesh;
     }

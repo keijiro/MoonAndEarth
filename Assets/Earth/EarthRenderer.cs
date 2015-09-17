@@ -212,15 +212,20 @@ public class EarthRenderer : MonoBehaviour
         mesh.SetIndices(indices, MeshTopology.Triangles, 0);
         mesh.Optimize();
 
-        mesh.bounds = new Bounds(Vector3.zero, Vector3.one);
+        mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 0.5f);
 
         return mesh;
     }
 
     void ResetResources()
     {
-        if (_mesh == null)
-            _mesh = CreateMesh();
+        _segments = Mathf.Clamp(_segments, 8, 128);
+        _rings = Mathf.Clamp(_rings, 8, 128);
+
+        if (_mesh != null)
+            DestroyImmediate(_mesh);
+
+        _mesh = CreateMesh();
 
         if (_baseMaterial == null)
             _baseMaterial = CreateMaterial(_baseShader);
