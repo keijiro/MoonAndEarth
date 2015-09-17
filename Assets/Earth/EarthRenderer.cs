@@ -169,7 +169,7 @@ public class EarthRenderer : MonoBehaviour
                 var z = Mathf.Sin(phi) * l_xz;
 
                 var normal = new Vector3(x, y, z);
-                var tangent = Vector3.Cross(normal, Vector3.up).normalized;
+                var tangent = new Vector3(-Mathf.Sin(phi), 0, Mathf.Cos(phi));
 
                 vertices [vi] = normal * 0.5f;
                 normals  [vi] = normal;
