@@ -55,14 +55,12 @@ public class MoonRenderer : MonoBehaviour
 
     #region Fixed Settings
 
-    [SerializeField]
-    int _segments = 64;
+    [SerializeField] int _segments = 64;
+    [SerializeField] int _rings = 32;
 
-    [SerializeField]
-    int _rings = 32;
-
-    [SerializeField]
-    Shader _baseShader;
+    [SerializeField] Shader _baseShader;
+    [SerializeField] Texture _baseMap;
+    [SerializeField] Texture _normalMap;
 
     #endregion
 
@@ -206,9 +204,13 @@ public class MoonRenderer : MonoBehaviour
     {
         if (_needsReset) ResetResources();
 
+        _baseMaterial.SetTexture("_BaseMap", _baseMap);
         _baseMaterial.SetFloat("_Saturation", _colorSaturation);
-        _baseMaterial.SetFloat("_Glossiness", _smoothness);
+
+        _baseMaterial.SetTexture("_NormalMap", _normalMap);
         _baseMaterial.SetFloat("_NormalScale", _normalScale);
+
+        _baseMaterial.SetFloat("_Glossiness", _smoothness);
 
         Graphics.DrawMesh(
             _mesh, transform.localToWorldMatrix,

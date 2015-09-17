@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: 8ad2ef606386f4524aac754ad536a877
-timeCreated: 1442402210
+timeCreated: 1442489228
 licenseType: Pro
 ShaderImporter:
   defaultTextures:
-  - _BaseMap: {fileID: 8900000, guid: 112fc3fc5952848c2a3073382748953d, type: 3}
-  - _NormalMap: {fileID: 2800000, guid: a2fc90befee5c419aa7c2608e7bde5cc, type: 3}
-  - _GlossMap: {fileID: 8900000, guid: 3055308ff9bca44278edb532d9778509, type: 3}
-  - _CloudMap: {fileID: 8900000, guid: ff5924b25036240f09e8eb7992e044a8, type: 3}
+  - _BaseMap: {instanceID: 0}
+  - _NormalMap: {instanceID: 0}
+  - _GlossMap: {instanceID: 0}
+  - _CloudMap: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

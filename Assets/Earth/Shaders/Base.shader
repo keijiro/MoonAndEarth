@@ -9,8 +9,8 @@
         _NormalMap ("Normal Map", 2D) = ""{}
         _NormalScale ("Normal Scale", Range(0,2)) = 0.5
 
-        _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _GlossMap ("Gloss Map", CUBE) = ""{}
+        _Glossiness ("Smoothness", Range(0,1)) = 0.5
 
         _CloudMap ("Cloud Map", CUBE) = ""{}
         _CloudColor ("Cloud Color", Color) = (1, 1, 1, 0.5)

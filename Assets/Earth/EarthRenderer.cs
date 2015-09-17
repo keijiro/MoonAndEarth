@@ -100,17 +100,17 @@ public class EarthRenderer : MonoBehaviour
 
     #region Fixed Settings
 
-    [SerializeField]
-    int _segments = 64;
+    [SerializeField] int _segments = 64; 
+    [SerializeField] int _rings = 32;
 
-    [SerializeField]
-    int _rings = 32;
+    [SerializeField] Shader _baseShader;
+    [SerializeField] Shader _atmosphereShader;
 
-    [SerializeField]
-    Shader _baseShader;
-
-    [SerializeField]
-    Shader _atmosphereShader;
+    [SerializeField] Texture _baseMap;
+    [SerializeField] Texture _normalMap;
+    [SerializeField] Texture _glossMap;
+    [SerializeField] Texture _cloudMap;
+    [SerializeField] Texture _nightLightMap;
 
     #endregion
 
@@ -261,15 +261,24 @@ public class EarthRenderer : MonoBehaviour
     {
         if (_needsReset) ResetResources();
 
+        _baseMaterial.SetTexture("_BaseMap", _baseMap);
         _baseMaterial.SetColor("_SeaColor", _seaColor);
         _baseMaterial.SetFloat("_Saturation", _colorSaturation);
-        _baseMaterial.SetFloat("_Glossiness", _smoothness);
-        _baseMaterial.SetColor("_CloudColor", _cloudColor);
+
+        _baseMaterial.SetTexture("_NormalMap", _normalMap);
         _baseMaterial.SetFloat("_NormalScale", _normalScale);
+
+        _baseMaterial.SetTexture("_GlossMap", _glossMap);
+        _baseMaterial.SetFloat("_Glossiness", _smoothness);
+
+        _baseMaterial.SetTexture("_CloudMap", _cloudMap);
+        _baseMaterial.SetColor("_CloudColor", _cloudColor);
+
+        _atmosphereMaterial.SetTexture("_NightMap", _nightLightMap);
+        _atmosphereMaterial.SetColor("_NightColor", _nightLightColor);
 
         _atmosphereMaterial.SetFloat("_RimPower", _rimExponent);
         _atmosphereMaterial.SetColor("_RimColor", _rimColor);
-        _atmosphereMaterial.SetColor("_NightColor", _nightLightColor);
 
         Graphics.DrawMesh(
             _mesh, transform.localToWorldMatrix,

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
 guid: 5bb489e47e8524602990bfb92b52f524
-timeCreated: 1442403121
+timeCreated: 1442489237
 licenseType: Pro
 ShaderImporter:
   defaultTextures:
-  - _NightMap: {fileID: 2800000, guid: 4b77263eac0344006bfa2d3e1eb414d1, type: 3}
+  - _NightMap: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
