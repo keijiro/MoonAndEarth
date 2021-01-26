@@ -15,6 +15,8 @@ provided under the Creative Commons license (cc-by-sa).
 The images of the Earth are provided from [NASA][3]. Basically you can use
 these images freely.
 
+The other assets (scripts, shaders, etc.) are put under the public domain.
+
 Contact
 -------
 
